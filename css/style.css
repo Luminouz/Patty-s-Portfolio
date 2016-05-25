@@ -13,11 +13,6 @@
   color: #333;
 }
 
-/* line 18, /Users/LuminouZ/Desktop/VMD142/quick/SCSS/_mixins.scss */
-.success {
-  border-color: green;
-}
-
 /* line 2, /Users/LuminouZ/Desktop/VMD142/quick/SCSS/_scaffolding.scss */
 html,
 body {
@@ -46,7 +41,6 @@ a:hover, a:focus {
 /* line 4, /Users/LuminouZ/Desktop/VMD142/quick/SCSS/_typography.scss */
 h1,
 h2,
-h3,
 h4 {
   font-family: 'Josefin Slab', serif;
   font-weight: 400;
@@ -65,6 +59,7 @@ h1 {
   font-size: 4em;
 }
 
+
 /* line 19, /Users/LuminouZ/Desktop/VMD142/quick/SCSS/_typography.scss */
 h2 {
   font-size: 2em;
@@ -73,11 +68,19 @@ h2 {
 /* line 22, /Users/LuminouZ/Desktop/VMD142/quick/SCSS/_typography.scss */
 h3 {
   font-size: 1.3em;
+  font-family: 'Josefin Slab', serif;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #333;
 }
 
 /* line 25, /Users/LuminouZ/Desktop/VMD142/quick/SCSS/_typography.scss */
 h4 {
-  font-size: 1em;
+  font-size: 2em;
+}
+
+h5 {
+    color: #eeb5a1;
 }
 
 /* line 30, /Users/LuminouZ/Desktop/VMD142/quick/SCSS/_typography.scss */
@@ -92,11 +95,12 @@ h4 {
 
 /* line 40, /Users/LuminouZ/Desktop/VMD142/quick/SCSS/_typography.scss */
 .home-h1 {
-  color: #eeb5a1;
+  color: #333;
   font-size: 2.5em;
   font-weight: 200;
   margin-top: 40px;
   margin-bottom: 40px;
+  padding-top: 40px;    
 }
 
 /* line 40, /Users/LuminouZ/Desktop/VMD142/quick/SCSS/_typography.scss */
@@ -109,9 +113,20 @@ h4 {
 
 @media (min-width: 768px) {
   /* line 49, /Users/LuminouZ/Desktop/VMD142/quick/SCSS/_typography.scss */
-  .home-h1 {
+.home-h1 {
     font-size: 4.5em;
-  }
+}
+
+.portfolio-h1 {
+    color: #eeb5a1;    
+    }
+    
+.img-circle {
+	width: 400px;
+	height: 400px;
+    object-fit: cover;
+}
+    
 }
 /* line 54, /Users/LuminouZ/Desktop/VMD142/quick/SCSS/_typography.scss */
 .home-h1 > span {
@@ -164,8 +179,8 @@ h4 {
 
 /* line 12, /Users/LuminouZ/Desktop/VMD142/quick/SCSS/_buttons.scss */
 .btn-dark {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(238, 181, 161, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: white;
   color: #666666;
 }
 /* line 19, /Users/LuminouZ/Desktop/VMD142/quick/SCSS/_buttons.scss */
@@ -219,47 +234,20 @@ label {
 
 /* line 1, /Users/LuminouZ/Desktop/VMD142/quick/SCSS/_other.scss */
 #home {
-  background-color: #333333;
-  padding: 40px 0;
-}
-
-/* line 6, /Users/LuminouZ/Desktop/VMD142/quick/SCSS/_other.scss */
-#cta-1 {
-  background-color: #f5f4f2;
-  padding: 40px 0;
-}
-
-/* line 11, /Users/LuminouZ/Desktop/VMD142/quick/SCSS/_other.scss */
-#testimonials {
-  background-color: #333333;
-}
-
-/* line 15, /Users/LuminouZ/Desktop/VMD142/quick/SCSS/_other.scss */
-#cta-2 {
   background-color: #eeb5a1;
   padding: 40px 0;
 }
 
-/* line 20, /Users/LuminouZ/Desktop/VMD142/quick/SCSS/_other.scss */
-#services {
-  background-color: #333333;
+#portfolio {
+    background-color: #f5f4f2;
 }
 
-/* line 24, /Users/LuminouZ/Desktop/VMD142/quick/SCSS/_other.scss */
-#cta-3 {
-  background-color: #333333;
-  padding: 40px 0;
+#portfolio-page {
+    background-color: white;
 }
 
-/* line 29, /Users/LuminouZ/Desktop/VMD142/quick/SCSS/_other.scss */
-#facts {
-  background-color: #333333;
-  padding: 40px 0;
-}
-
-/* line 34, /Users/LuminouZ/Desktop/VMD142/quick/SCSS/_other.scss */
 #footer {
-  background-color: #ccc;
+  background-color: #eeb5a1;
 }
 
 /* line 42, /Users/LuminouZ/Desktop/VMD142/quick/SCSS/_other.scss */
@@ -402,7 +390,7 @@ label {
 .item-img-wrap {
   position: relative;
   text-align: center;
-  overflow: hidden;
+  overflow: auto;
 }
 
 /* line 164, /Users/LuminouZ/Desktop/VMD142/quick/SCSS/_other.scss */
@@ -486,7 +474,7 @@ label {
   right: 10px;
   z-index: 999999;
   display: none;
-  background: #eeb5a1;
+  background: #333;
   opacity: 0.5;
   -webkit-transform: all 0.3s;
   -moz-transform: all 0.3s;
@@ -519,12 +507,11 @@ label {
   height: 100%;
   background-image: url(../img/pattern.png);
   background-repeat: repeat;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #eeb5a1;
 }
 
 /* line 261, /Users/LuminouZ/Desktop/VMD142/quick/SCSS/_other.scss */
 #home {
-  background-image: url(../img/showcase-1.jpg);
   padding: 160px 0;
   width: 100%;
   height: 100%;
@@ -590,3 +577,141 @@ label {
   color: white;
   transform: rotateY(360deg);
 }
+
+.portfolio-col {
+    margin-bottom:0px;
+    width:100%;
+}
+
+.portfolio-col-2{
+    margin-bottom:70px;
+    width:100%;
+}
+
+.portfolio-col .hover-bg{
+    overflow:hidden;
+    position:relative;
+}
+
+.hover-bg .hover-text{
+    position:absolute;
+    text-align:center;
+    margin:0 auto;
+    color:#333;
+    background-color:rgba(255, 255, 255, .8);
+    padding:18% 0;
+    height:100%;
+    width:100%;
+    opacity:0;
+    transition:all 0.5s;
+}
+
+.hover-bg .hover-text>h4{
+    opacity:0;
+    letter-spacing:2px;
+    -webkit-transform:translateY(100%);
+    transform:translateY(100%);
+    transition:all 0.4s;
+}
+
+.hover-bg:hover .hover-text>h4{
+    opacity:1;
+    -webkit-backface-visibility:hidden;
+    -webkit-transform:translateY(0);
+    transform:translateY(0);
+}
+
+.hover-bg .hover-text>i{
+    opacity:1;-webkit-transform:translateY(0);
+    transform:translateY(0);
+    transition:all 0.4s;
+}
+
+.hover-bg:hover .hover-text>i{
+    opacity:0;
+    -webkit-backface-visibility:hidden;
+    -webkit-transform:translateY(100%);
+    transform:translateY(100%);
+}
+
+.hover-bg:hover .hover-text{
+    opacity:1;
+}
+
+#works i.fa{
+    height:30px;
+    width:30px;
+    font-size:20px;
+    padding:5px;
+    border-radius:50%;
+    color:#555;
+}
+
+.hover-bg .line{
+    background:#333 none repeat scroll 0 0;
+    color:white;
+    height:2px;
+    text-align:center;
+    width:66px;
+}
+
+.hover-bg .hover-text>hr{
+    opacity:1;
+    -webkit-transform:translateX(100%);
+    transform:translateX(100%);
+    transition:all 0.5s;
+    
+}
+
+.hover-bg:hover .hover-text>hr{
+    opacity:1;
+    -webkit-backface-visibility:hidden;
+    -webkit-transform:translateX(0);
+    transform:translateX(0);
+}
+
+.section-title.center{
+    padding:30px 0;
+    text-align:center;
+}
+
+.section-title h2,
+.section-title.center h2{
+    font-weight:300;
+    color:#030303;
+    font-size:26px;
+    letter-spacing:2px;
+    line-height:1.8;}
+
+.section-title .line{
+    border-top:1px solid #eeb5a1;
+    height:10px;
+    width:300px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.section-title p {
+    color:#333;
+    letter-spacing:1px;
+    padding-top:20px;
+    padding-bottom:20px;
+    margin-bottom:0;
+}
+
+.line{
+    border-top:3px solid #eeb5a1;
+    text-align: center;
+    margin: 0;
+    height:10px;
+    width:300px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.space{
+    margin-top:40px;
+}
+
+
+

@@ -24,6 +24,12 @@
 	border-bottom-color: $white;
 }
 
+.col-lg-6{padding-right:0px;padding-left:0px;}
+.col-md-6{padding-right:0px;padding-left:0px;}
+.col-sm-6{padding-right:0px;padding-left:0px;}
+.col-md-12{padding-right:0px;padding-left:0px;}
+.col-sm-12{padding-right:0px;padding-left:0px;}
+
 
 //padding
 .section-padding {
@@ -82,35 +88,6 @@
 	background-color: $gray-lighter;
 }
 
-.services-col {
-	color: $peach;
-}
-
-.services-col h3 {
-	color: $peach;
-	margin-top: 0;
-	font-weight: 200;
-	letter-spacing: 1px;
-	font-size: 1.75em;
-}
-
-.services-col p {
-	color: $gray;
-	letter-spacing: 1px;
-	font-weight: 200;
-	line-height: 2;
-}
-
-.services-col .fa {
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-    text-align: center;
-    color: $white;
-    background-color: $peach;
-    border-radius: 35px;
-    margin-bottom: 10px;
-}
 
 .contact-hours .fa {
     color: $blue;
@@ -126,6 +103,10 @@
     margin-bottom: 10px;
 }
 
+.port-row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
 .author {
     color: $peach;
     font-size: 1.1em; // 1.1x base font size
@@ -168,7 +149,6 @@
 .about-col, 
 .team-col, 
 .services-col, 
-.portfolio-col, 
 .facts-col, 
 .blog-col {
     margin-bottom: 40px;
@@ -181,10 +161,6 @@
 	margin-bottom: 20px;
 }
 
-.services-col {
-	color: $blue;
-    text-align: center;
-}
 
 @media (min-width: 768px) {
     .services-col {
@@ -224,21 +200,22 @@
     background-size: cover;
     background-attachment: fixed;
 }
-.parallax-overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(../img/pattern.png);
-    background-repeat: repeat;
-    background-color: rgba(0,0,0,0.3);
-}
+
 #home {
     background-image: url(../img/patty.jpg);
     padding: 160px 0;
     width: 100%;
     height: 100%;
+}
+
+.img-circle {
+	width: 400px;
+	height: 400px;
+	line-height: 400px;
+	color: $gray;
+	background-color: $gray-lighter;
+	transition: 0.7s ease-in-out; // use prefix mixin	
+}
 
 .main-flex-slider {
     overflow: hidden;
@@ -260,20 +237,101 @@ color: $white;
 transform: rotateY(360deg); // use prefix mixin  
 }
 
-.services-col .fa {
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-    text-align: center;
-    color: $white;
-    background-color: $blue;
-    border-radius: 35px;
-    margin-bottom: 10px;
-    transition: 0.7s ease-in-out; // use prefix mixin	
+.portfolio-col {
+    margin-bottom:0px;
+    width:100%;}
+.portfolio-col-2{
+    margin-bottom:70px;
+    width:100%;}
+.portfolio-col .hover-bg{
+    overflow:hidden;
+    position:relative;
 }
 
-.services-col:hover .fa {
-background-color: $blue;
-color: $white;
-transform: rotateY(360deg); // use prefix mixin  
+.hover-bg .hover-text{
+    position:absolute;
+    text-align:center;
+    margin:0 auto;color:#333;
+    background-color:rgba(238, 181, 161, .9);
+    padding:18% 0;
+    height:100%;
+    width:100%;
+    opacity:0;
+    transition:all 0.5s;
 }
+
+.hover-bg .hover-text>h4{
+    opacity:0;
+    letter-spacing:2px;
+    -webkit-transform:translateY(100%);
+    transform:translateY(100%);
+    transition:all 0.4s;
+}
+
+.hover-bg:hover .hover-text>h4{
+    opacity:1;
+    -webkit-backface-visibility:hidden;
+    -webkit-transform:translateY(0);
+    transform:translateY(0);
+}
+
+.hover-bg .hover-text>i{
+    opacity:1;-webkit-transform:translateY(0);
+    transform:translateY(0);
+    transition:all 0.4s;
+}
+
+.hover-bg:hover .hover-text>i{
+    opacity:0;
+    -webkit-backface-visibility:hidden;
+    -webkit-transform:translateY(100%);
+    transform:translateY(100%);
+}
+
+.hover-bg:hover .hover-text{
+    opacity:1;
+}
+
+#works i.fa{
+    height:30px;
+    width:30px;
+    font-size:20px;
+    padding:5px;
+    border-radius:50%;
+    color:#555;
+}
+
+.hover-bg .line{
+    background:#444 none repeat scroll 0 0;
+    color:black;
+    height:2px;
+    text-align:center;
+    width:66px;
+}
+
+.hover-bg .hover-text>hr{
+    opacity:1;
+    -webkit-transform:translateX(100%);
+    transform:translateX(100%);
+    transition:all 0.5s;
+    
+}
+
+.hover-bg:hover .hover-text>hr{
+    opacity:1;
+    -webkit-backface-visibility:hidden;
+    -webkit-transform:translateX(0);
+    transform:translateX(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
