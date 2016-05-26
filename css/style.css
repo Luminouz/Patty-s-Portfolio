@@ -638,6 +638,14 @@ label {
     opacity:1;
 }
 
+.hover-bg .line{
+    background:#444 none repeat scroll 0 0;
+    color:black;
+    height:2px;
+    text-align:center;
+    width:66px;}
+}
+
 #works i.fa{
     height:30px;
     width:30px;
@@ -647,13 +655,6 @@ label {
     color:#555;
 }
 
-.hover-bg .line{
-    background:#333 none repeat scroll 0 0;
-    color:white;
-    height:2px;
-    text-align:center;
-    width:66px;
-}
 
 .hover-bg .hover-text>hr{
     opacity:1;
@@ -699,19 +700,10 @@ label {
     margin-bottom:0;
 }
 
-.line{
-    border-top:3px solid #eeb5a1;
-    text-align: center;
-    margin: 0;
-    height:10px;
-    width:300px;
-    margin-top:20px;
-    margin-bottom:20px;
-}
-
 .space{
     margin-top:40px;
 }
+
 
 
 
