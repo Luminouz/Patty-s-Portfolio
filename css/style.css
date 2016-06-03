@@ -6,6 +6,13 @@
   border-radius: 10px;
 }
 
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
 /* line 12, /Users/LuminouZ/Desktop/VMD142/quick/SCSS/_mixins.scss */
 .message, .success {
   border: 1px solid #eeb5a1;
